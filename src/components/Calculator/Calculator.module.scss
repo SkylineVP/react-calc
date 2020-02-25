@@ -1,11 +1,49 @@
-.flexCol{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+table {
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
 }
-.button{
-  flex: 1;
+
+td {
+  box-sizing: border-box;
+  padding: 10px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+
+  &:active {
+    background-color: #eaeaea;
+  }
 }
-.equal{
-  flex-grow: 4;
+
+.Calculator {
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0 0 28px -4px rgba(0, 0, 0, 0.25);
+}
+
+td + td {
+  border-left: 0.5px solid rgba(0, 0, 0, 0.18);
+}
+
+.Operator {
+  background-color: #eaeaea;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: inset 0 0 38px -28px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.equal {
+  background-color: rgb(241, 121, 75);
+
+  &:active {
+    box-shadow: inset 0 0 38px -28px rgba(0, 0, 0, 0.35);
+    background-color: rgb(215, 93, 54);
+  }
 }

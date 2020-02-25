@@ -1,16 +1,18 @@
-import React,{Component} from "react";
-import OPERATORS      from '../../Constants'
-import style             from   './Calculator.module.scss'
-import Operator          from "../Operator";
-import DigitButton       from "../DigitButton";
-class Calculator extends Component{
+import React, {Component} from "react";
+import OPERATORS from '../../Constants'
+import style from './Calculator.module.scss'
+import Operator from "../Operator";
+import DigitButton from "../DigitButton";
+import Dislplay from "../Display";
+
+class Calculator extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            leftOperand:null,
-            rightOperand:null,
-            operator:null,
-            result:'',
+        this.state = {
+            leftOperand: null,
+            rightOperand: null,
+            operator: null,
+            result: '',
 
         };
         this.behaviour=null;
@@ -24,20 +26,20 @@ class Calculator extends Component{
     };
     render() {
         return (
-            <div>
-                <input type="text" value='operand'/>
+            <div className={style.Calculator}>
+                <Dislplay>0000</Dislplay>
                 <table>
                     <tr>
-                        <td><Operator>+</Operator></td>
-                        <td><Operator>-</Operator></td>
-                        <td><Operator>X</Operator></td>
-                        <td><Operator>/</Operator></td>
+                        <td className={style.Operator}><Operator>+</Operator></td>
+                        <td className={style.Operator}><Operator>-</Operator></td>
+                        <td className={style.Operator}><Operator>X</Operator></td>
+                        <td className={style.Operator}><Operator>/</Operator></td>
                     </tr>
                     <tr>
                         <td><DigitButton>7</DigitButton></td>
                         <td><DigitButton>8</DigitButton></td>
                         <td><DigitButton>9</DigitButton></td>
-                        <td rowSpan={4}><DigitButton>=</DigitButton></td>
+                        <td rowSpan={4} className={style.equal}><DigitButton>=</DigitButton></td>
                     </tr>
                     <tr>
                         <td><DigitButton>4</DigitButton></td>

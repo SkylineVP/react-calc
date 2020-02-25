@@ -1,0 +1,11 @@
+.flexCol{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.button{
+  flex: 1;
+}
+.equal{
+  flex-grow: 4;
+}
